@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Multi-step Form | Admission Process</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <main class="main-wrapper">
+    <section class="form-container card">
+      <header class="header">
+        <div class="center-text">
+          <img src="#" alt="sch logo">
+          <h2 class="title">
+            Admission Portal
+          </h2>
+          <h3 class="title" data-form-title="form-title">login</h3>
+        </div>
+      </header>
+      <!-- to login into created a/c -->
+      <div class="login-form-container">
+        <form action="#" method="post" data-login-frm="login-frm">
+          <div class="input-field">
+            <input type="text" name="username" placeholder="Email or Username" required>
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="input-field">
+            <button type="button" class="btn btn-pry btn-block" data-login-btn="login-btn">
+              login
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- to process admission by creating an a/c -->
+      <div class="reg-form-container">
+        <!-- steps indicators -->
+        <header class="header">
+          <span class="indicators">1</span>
+          <span class="indicators">2</span>
+          <span class="indicators">3</span>
+        </header>
+
+        <form action="#" method="post" data-reg-frm="reg-frm">
+          <!-- tab-container -->
+          <div class="tab-container">
+            <div class="tab">
+              <div class="input-field">
+                <input type="text" name="username" placeholder="Username" required>
+              </div>
+              <div class="input-field">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+              <div class="input-field">
+                <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <div class="input-field">
+                <input type="password" name="rePassword" placeholder="Re-enter password" required data-rePwd-="rePwd">
+                <span class="error-msg" data-rePwd-error-msg="rePwd-error"></span>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div class="input-field">
+                <select name="bankName" required>
+                  <option value="">-- Select from list of Banks --</option>
+                  <option value="gtbank">GTBank</option>
+                  <option value="access diamond">Access Diamond</option>
+                  <option value="FBN">First Bank of Nigeria</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <input type="text" name="nameOnCreditCard" placeholder="Name on Credit Card" required>
+              </div>
+              <div class="grid-container three-column">
+                <div class="input-field">
+                  <input type="number" name="PIN" placeholder="Card PIN" required>
+                </div>
+                <div class="input-field">
+                  <input type="number" name="ccv" placeholder="CCV no_">
+                </div>
+                <div class="input-field">
+                  <input type="date" name="cardExpire" placeholder="Expire date" required>
+                </div>
+              </div>
+              <div class="input-field">
+                <input type="number" name="accNo" placeholder="Account number" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- next/prev buttons -->
+          <div class="input-field flex-container flex-end">
+            <!-- prev btn -->
+            <button type="button" class="btn btn-outline" data-prev-btn="prev-btn">
+              prev
+            </button>
+            <!-- next btn -->
+            <button type="button" class="btn" data-next-btn="next-btn">
+              next
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- JS files -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
