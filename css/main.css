@@ -29,7 +29,7 @@ html, body {
 }
 
 .sch-logo {
-  width: 150px;
+  width: 130px;
   height: auto;
 }
 
@@ -40,9 +40,39 @@ html, body {
   margin-bottom: 0.7rem;
 }
 
+.header {
+  padding: 1rem;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.grid-container {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.two-grid-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-grid-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-grid-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .main-wrapper {
   height: 100vh;
-  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -54,18 +84,142 @@ html, body {
 
 .form-container {
   width: 100%;
-  max-width: 350px;
-  /* border: 1px dashed var(--black-color); */
+  max-width: 350px; 
+  margin: 10% auto;
 }
+
+/* login form */
+.login-form-container {
+  display: none;
+}
+
+.login-form-footer {
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.login-form-footer a {
+  text-decoration: none;
+  color: var(--pry-color);
+  letter-spacing: 1px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* login form ends */
 
 /* registration form container should not be displayed at initial stage */
 .reg-form-container {
-  display: none;
+  display: block;
 }
 
 .reg-form-container, .login-form-container {
   padding: 0.8rem 0.5rem;
 }
+
+.reg-form-container form [data-prev-btn="prev-btn"] {
+  margin-right: 0.9rem;
+  display: none;
+}
+
+/* registration form container ends */
+
+/* Indicators */
+.indicator-container {
+  margin-bottom: 0.3rem;
+}
+
+.indicator-container span.indicators {
+  display: inline-block;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--light-grey-color);
+}
+
+.indicator-container span.active {
+  background: var(--secondary-color);
+  transition: background  600ms ease-in-out;
+}
+
+.indicator-title {
+  font-weight: 100;
+}
+
+/* Indicators ends */
+
+/* reg form tabs */
+.reg-form-container .tab-container .tab {
+  display: none;
+}
+
+.reg-form-container .tab-container .tab:nth-child(1) {
+  display: block;
+}
+/* reg form tabs ends */
+
+
+
+/* background colours */
+.bg-white {
+  background: var(--white-color);
+  color: inherit;
+}
+
+.bg-pry {
+  background: var(--pry-color);
+  color: var(--white-color);
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.bg-success {
+  background: var(--success-color);
+  color: var(--white-color);
+}
+
+.bg-warning {
+  background: var(--warning-color);
+  color: var(--white-color);
+}
+
+.bg-dangers {
+  background: var(--dangers-color);
+  color: var(--white-color);
+}
+/* background colours ends */
+
+/* text colour */
+.text-grey {
+  color: var(--light-grey-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-pry {
+  color: var(--pry-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-warning {
+  color: var(--warning-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+/* text colour ends */
 
 /* Card style */
 .card {
@@ -73,7 +227,7 @@ html, body {
   border-radius: 4px;
   background: var(--white-color);
   color: inherit;
-  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 7px 32px 0px rgba(234, 216, 216, 0.2);
 }
 
 .card-header {
@@ -93,7 +247,7 @@ html, body {
   outline: none;
   border: 1px solid var(--light-grey-color);
   border-radius: 3px;
-  padding: 1.1rem 0.7rem;
+  padding: 1rem 0.7rem;
   width: 100%;
   background: var(--white-color);
   color: #23213f;

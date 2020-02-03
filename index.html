@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <main class="main-wrapper center-element">
-    <section class="form-container card">
+  <main class="main-wrapper bg-white">
+    <section class="form-container">
       <header class="card-header">
         <div class="center-text">
           <!-- sch crest / logo -->
-          <img src="#" alt="sch logo" width="150" height="auto" class="sch-logo">
+          <img src="./img/afss_logo.png" alt="sch logo" width="150" height="auto" class="sch-logo">
           <h2 class="title">
+            Ibadan <br>
             Admission Portal
           </h2>
-          <h3 class="title" data-form-title="form-title">
+          <h3 class="text-secondary title" style="margin-bottom: 0;" class="title" data-form-title="form-title">
             login
           </h3>
         </div>
@@ -38,20 +39,26 @@
             </button>
           </div>
         </form>
+
+        <div class="login-form-footer center-text">
+          don't have an account? 
+          <a href="#" data-show-reg-frm="show-reg-frm">signup</a>
+        </div>
       </section>
 
       <!-- to process admission by creating an a/c -->
       <div class="reg-form-container">
         <!-- steps indicators -->
-        <header class="header">
-          <span class="indicators">1</span>
-          <span class="indicators">2</span>
-          <span class="indicators">3</span>
+        <header class="center-text indicator-container">
+          <span class="indicators active"></span>
+          <span class="indicators"></span>
+          <h4 class="title indicator-title text-secondary">create account</h4>
         </header>
 
         <form action="#" method="post" data-reg-frm="reg-frm">
           <!-- tab-container -->
           <div class="tab-container">
+            <!-- first step: credentials for a/c accessibility -->
             <div class="tab">
               <div class="input-field">
                 <input type="text" name="username" placeholder="Username" required>
@@ -68,6 +75,7 @@
               </div>
             </div>
 
+            <!-- second step: make payment for admission process -->
             <div class="tab">
               <div class="input-field">
                 <select name="bankName" required>
@@ -80,7 +88,7 @@
               <div class="input-field">
                 <input type="text" name="nameOnCreditCard" placeholder="Name on Credit Card" required>
               </div>
-              <div class="grid-container three-column">
+              <div class="grid-container three-grid-columns">
                 <div class="input-field">
                   <input type="number" name="PIN" placeholder="Card PIN" required>
                 </div>
@@ -88,7 +96,7 @@
                   <input type="number" name="ccv" placeholder="CCV no_">
                 </div>
                 <div class="input-field">
-                  <input type="date" name="cardExpire" placeholder="Expire date" required>
+                  <input type="text" name="cardExpire" placeholder="Expiry date" required>
                 </div>
               </div>
               <div class="input-field">
@@ -109,6 +117,11 @@
             </button>
           </div>
         </form>
+
+        <div class="login-form-footer center-text">
+            Already have an account? 
+            <a href="#" data-show-login-frm="show-login-frm">login</a>
+          </div>
       </div>
     </section>
   </main>
