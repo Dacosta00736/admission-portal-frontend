@@ -27,21 +27,21 @@ function getFrmData(frmID) {
   return frmData;
 }
 
-// for form validations
-function validateFrm(frmID) {
-  const frmEle = frmID.elements;
-  for (let i = 0; i < frmEle.length; i++) {
-    if( frmEle[i].value === "" || frmEle[i].value === "undefined" ) {
-      console.log('Please fill all the required fields!');
-      return false;
-    }
+// help compare password if it matches
+function comparePwd(pwd, rePwd, errMsg) {
+  if (pwd.value != rePwd.value) {
+    errMsg.innerHTML = "<i>&#8520;</i> <span>Password do not match!</span>";
+    rePwd.style.borderColor = "var(--danger-color)";
+  } else {
+    errMsg.innerHTML = "";
+    rePwd.style.borderColor = "var(--light-grey-color)";
   }
-  return;
 }
 
-// check if tabs input fields not empty
-function validateInptField(ele) {
-  let valid = ele.every((inpt) => inpt.firstElementChild.value.length > 0);
+function nonDigitalSearch(eleVal) {
+  // a global digital search pattern for non-digits
+  let pattern = /[^0-9]/g;
+  let valid = pattern.test(eleVal);
   return valid;
 }
 /* ====== @desc: utility functions ends ====== */
@@ -90,8 +90,12 @@ const ctrlSignupTabs = (no) => {
   // change next btn text
   if ( tabCount == (tabLen - 1) ) {
     nextBtn.innerText = 'submit';
+    setTimeout(() => {
+      nextBtn.type = 'submit';
+    }, 500);
   } else {
     nextBtn.innerText = 'next';
+    nextBtn.type = 'button';
   }
 
   // activate correct steps indicator
@@ -105,15 +109,6 @@ const prevNextTab = (no) => {
   // the tabs
   const tab = cssQryAll('.tab-container .tab');
 
-  // validate all current tab fields if not empty b4 proceeding
-  // const tabInptFields = Array.from(tab[tabCount].children);
-  // if (!validateInptField(tabInptFields)) {
-  //   // warning messages
-  //   console.log('Please all fields must be filled!');
-  //   // exit the function
-  //   return false;
-  // }
-
   // hide current tab
   tab[tabCount].style.display = 'none';
 
@@ -123,12 +118,46 @@ const prevNextTab = (no) => {
   // if reach the end of tabs
   if (tabCount >= tab.length) {
     tabCount = (tab.length - 1);
-    console.log('submit the form');
-    return false;
   }
 
+  // otherwise continue to show next or previous tab
   ctrlSignupTabs(tabCount);
-  console.log(tabCount, no);
+};
+
+const checkCardPin = function() {
+  const val = cssQry(document, '[name=cardPIN]');
+
+  if ( nonDigitalSearch(val.value) ) {
+    val.value =  val.value.slice( 0, (val.value.length - 1) );
+    return false;
+  }
+};
+
+const checkCVV = function() {
+  const val = cssQry(document, '[name=cardCVV]');
+  if ( nonDigitalSearch(val.value) ) {
+    val.value = val.value.slice( 0, (val.value.length - 1) );
+    return false;
+  }
+};
+
+const checkExpiryDate = function() {
+  const val = cssQry(document, '[name=cardExpire]');
+  const pattern = /[a-zA-Z]/g;
+  let valid = pattern.test(val.value);
+  let slash = '/';
+  if (valid) {
+    val.value = val.value.slice( 0, (val.value.length - 1) );
+    return false;
+  }
+};
+
+const checkAcNo = function() {
+  const val = cssQry(document, '[name=accNo]');
+  if ( nonDigitalSearch(val.value) ) {
+    val.value = val.value.slice( 0, (val.value.length - 1) );
+    return false;
+  }
 };
 
 // @desc: singup progress indicator
@@ -191,11 +220,38 @@ prevBtn.addEventListener("click", () => {
   prevNextTab(-1);
 });
 
+// checks card pin event
+cssQry(document, '[name=cardPIN]').addEventListener('keyup', checkCardPin);
+
+// checks card CVV event
+cssQry(document, '[name=cardCVV]').addEventListener('keyup', checkCVV);
+
+// checks card expiry date event
+cssQry(document, '[name=cardExpire]').addEventListener('keyup', checkExpiryDate);
+
+// checks acc. no_ inputs event
+cssQry(document, '[name=accNo]').addEventListener('keyup', checkAcNo);
+
+// compare password on singup form
+cssQry(document, "[data-signup-repwd]").addEventListener('keyup', () => {
+  comparePwd(
+    cssQry(document, "[data-signup-pwd]"),
+    cssQry(document, "[data-signup-repwd]"),
+    cssQry(document, "[data-repwd-error-msg]")
+  );
+});
+
 // for login form submission
 loginFrm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const frmData = getFrmData(loginFrm);
+  console.log(frmData);
+});
+
+signupFrm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const frmData = getFrmData(signupFrm);
   console.log(frmData);
 });
 /* ====== Event handler ends ====== */

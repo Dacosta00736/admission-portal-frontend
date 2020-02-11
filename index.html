@@ -25,7 +25,7 @@
       </header>
 
       <!-- to login into created a/c -->
-      <section class="login-form-container hide">
+      <section class="login-form-container">
         <form action="#" method="post" data-login-frm="login-frm">
           <div class="input-field">
             <input type="text" name="username" placeholder="Email or Username" required>
@@ -47,7 +47,7 @@
       </section>
 
       <!-- to process admission by creating an a/c -->
-      <div class="reg-form-container show">
+      <div class="reg-form-container">
         <!-- steps indicators -->
         <header class="center-text indicator-container">
           <span class="indicators active"></span>
@@ -67,10 +67,10 @@
                 <input type="email" name="email" placeholder="Email Address" required>
               </div>
               <div class="input-field">
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" data-signup-pwd="signup-pwd" required>
               </div>
               <div class="input-field">
-                <input type="password" name="rePassword" placeholder="Re-enter password" required data-rePwd-="rePwd">
+                <input type="password" name="rePassword" placeholder="Re-enter password" required data-signup-rePwd="signup-rePwd">
                 <span class="error-msg" data-rePwd-error-msg="rePwd-error"></span>
               </div>
             </div>
@@ -90,17 +90,17 @@
               </div>
               <div class="grid-container three-grid-columns">
                 <div class="input-field">
-                  <input type="number" name="PIN" placeholder="Card PIN" required>
+                  <input type="password" name="cardPIN" placeholder="Card PIN" maxlength="4" required>
                 </div>
                 <div class="input-field">
-                  <input type="number" name="ccv" placeholder="CCV no_">
+                  <input type="text" name="cardCVV" placeholder="CVV no_" maxlength="3" required>
                 </div>
                 <div class="input-field">
-                  <input type="text" name="cardExpire" placeholder="Expiry date" required>
+                  <input type="text" name="cardExpire" placeholder="Expiry date" maxlength="5" required>
                 </div>
               </div>
               <div class="input-field">
-                <input type="number" name="accNo" placeholder="Account number" required>
+                <input type="text" name="accNo" placeholder="Account number" maxlength="10" required>
               </div>
             </div>
           </div>
