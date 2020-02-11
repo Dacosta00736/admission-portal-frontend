@@ -1,0 +1,147 @@
+/* Button styles */
+.btn  {
+  padding: 1rem 0.7rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: var(--light-grey-color);
+  color: #23213f;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  opacity: 0.7;
+  box-shadow: 0px 19px 40px -12px rgba(230, 210, 210, 0.35);
+  transition: all 600ms ease-in-out;
+}
+
+.btn:hover, btn:focus {
+  opacity: 1;
+  box-shadow: none;
+}
+
+.btn:focus {
+  border: 0px solid var(--light-grey-color);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-pry {
+  background: var(--pry-color);
+  color: var(--white-color);
+  box-shadow: 0px 19px 40px -12px rgba(28, 54, 167, 0.35);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  box-shadow: 0px 19px 40px -12px rgba(25, 30, 54, 0.35);
+}
+
+.btn-success {
+  background: var(--success-color);
+  color: var(--white-color);
+  box-shadow: 0px 19px 40px -12px rgba(65, 168, 34, 0.35);
+}
+
+.btn-warning {
+  background: var(--warning-color);
+  color: var(--white-color);
+  box-shadow: 0px 19px 40px -12px rgba(129, 190, 14, 0.35);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: var(--white-color);
+  box-shadow: 0px 19px 40px -12px rgba(179, 55, 25, 0.35);
+}
+
+.btn-outline {
+  border: 2px solid var(--light-grey-color);
+  background: none;
+  opacity: 1;
+  box-shadow: none;
+  transition: background 600ms ease-in-out;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  background: var(--light-grey-color);
+}
+
+.btn-outline:focus {
+  border-color: var(--light-grey-color);
+}
+
+.btn-outline-pry {
+  border: 2px solid var(--pry-color);
+  background: transparent;
+}
+
+.btn-outline-pry:hover, .btn-outline-pry:focus {
+  background: var(--pry-color);
+  color: var(--white-color);
+}
+
+.btn-outline-pry:focus {
+  border-color: var(--pry-color);
+}
+
+.btn-outline-secondary {
+  border: 2px solid var(--secondary-color);
+  background: transparent;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-outline-secondary:focus {
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-success {
+  border: 2px solid var(--success-color);
+  background: transparent;
+}
+
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background: var(--success-color);
+  color: var(--white-color);
+}
+
+.btn-outline-success:focus {
+  border-color: var(--success-color);
+}
+
+.btn-outline-warning {
+  border: 2px solid var(--warning-color);
+  background: transparent;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:focus {
+  background: var(--warning-color);
+  color: var(--white-color);
+}
+
+.btn-outline-warning:focus {
+  border-color: var(--warning-color);
+}
+
+.btn-outline-danger {
+  border: 2px solid var(--danger-color);
+  background: transparent;
+}
+
+.btn-outline-danger:hover, .btn-outline-danger:focus {
+  background: var(--danger-color);
+  color: var(--white-color);
+}
+
+.btn-outline-danger:focus {
+  border-color: var(--danger-color);
+}
+/* Button styles ends */

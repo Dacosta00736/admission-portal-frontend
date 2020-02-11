@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFSS Ibadan Admission Form</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/colours.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+  <link rel="stylesheet" href="../css/inputs-fields.css">
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="../css/utility.css">
+  <link rel="stylesheet" href="../css/admission-form.css">
+</head>
+<body>
+  <main class="main-wrapper bg-white">
+    <header class="admission-form-header">
+      <div class="center-text">
+        <!-- sch crest / logo -->
+        <img src="../img/afss_logo.png" alt="sch logo" width="140" height="auto" class="sch-logo">
+        <h2 class="title">
+          Ibadan <br>
+          Admission Form
+        </h2>
+      </div>
+    </header>
+
+    <section class="form-container">
+      <!-- steps indicators -->
+      <header class="center-text indicator-container">
+        <span class="indicators active"></span>
+        <span class="indicators"></span>
+        <h4 class="title indicator-title text-secondary">create account</h4>
+      </header>
+
+      <section class="admission-frm-container">
+        <form action="#" method="POST" data-admission-frm="admission-frm">
+          <div class="tab-container">
+            <!-- 1st step: student's data-info -->
+            <div class="tab" title="student's info">
+              <div class="input-field">
+                <label for="first name">first name (surname)</label>
+                <input type="text" name="firstname" placeholder="First Name or Surname" required>
+              </div>
+              <div class="input-field">
+                <label for="other name">other name</label>
+                <input type="text" name="otherName" placeholder="Other Name" required>
+              </div>
+              <div class="input-field">
+                <label for="gender">gender</label>
+                <select name="gender" required>
+                  <option value="">-- Select Your Gender --</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="first name">passport photograph</label>
+                <input type="file" name="passport" placeholder="Your passport photograph">
+                <small class="text-pry">
+                  &#8520; Your passport size shouldn't be more than 100kb
+                </small>
+              </div>
+            </div>
+
+            <!-- 2nd step: student's origin -->
+            <div class="tab" title="student's origin">
+              <div class="input-field">
+                <label for="DOB">DOB</label>
+                <input type="date" name="DOB" placeholder="date of birth" required>
+              </div>
+              <div class="input-field">
+                <label for="nationality">nationality</label>
+                <input type="text" name="nationality" placeholder="Your Nationality" required>
+              </div>
+              <div class="input-field">
+                <label for="city">Your city</label>
+                <input type="text" name="provinceState" placeholder="State / province / city or town" required>
+              </div>
+              <div class="input-field">
+                <label for="home address">home address</label>
+                <input type="text" name="homeAddress" placeholder="Residential Address">
+              </div>
+            </div>
+
+            <!-- 3rd step: parent's data-info -->
+            <div class="tab" title="parent's data-info">
+              <div class="input-field">
+                <label for="father's name">father's full name</label>
+                <input type="text" name="fatherName" placeholder="Father's Full name" required>
+              </div>
+              <div class="input-field">
+                <label for="mother's name">mother's full name</label>
+                <input type="text" name="motherName" placeholder="Mother's Full name" required>
+              </div>
+              <div class="input-field">
+                <label for="parent's email">Parent's Email</label>
+                <input type="email" name="parentEmail" placeholder="Parent's Email Address" required>
+              </div>
+              <div class="input-field">
+                <label for="parent's phone">Parent's phone No_</label>
+                <input type="tel" name="parentPhone" placeholder="Parent's Phone No_" required>
+              </div>
+            </div>
+
+            <!-- 4th step: Admission data-info -->
+            <div class="tab" title="admission info">
+              <div class="input-field">
+                <label for="admission class">admission class</label>
+                <select name="admissionClass" required>
+                  <option value="">-- Select class for Admission --</option>
+                  <option value="jss1">JSS 1</option>
+                  <option value="jss2">JSS 2</option>
+                  <option value="sss1">SSS 1</option>
+                  <option value="sss2">SSS 2</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="former sch">former sch name</label>
+                <input type="text" name="formerSch" placeholder="Name of previous school">
+              </div>
+              <div class="input-field">
+                <label for="former class">former class</label>
+                <input type="text" name="formerClass" placeholder="Last Class Attended">
+              </div>
+              <div class="input-field">
+                <label for="exam date">Examination Date</label>
+                <select name="examDate" required>
+                  <option value="">-- Select Prefered Exam Date --</option>
+                  <option value="2020-02-10T09:00Z">Feb 10 (10:00am)</option>
+                  <option value="2020-02-11T09:00Z">Feb 11 (10:00am)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- next/prev buttons -->
+          <div class="input-field flex-container flex-end">
+            <!-- prev btn -->
+            <button type="button" class="btn btn-outline fade-in" data-prev-btn="prev-btn">
+              prev
+            </button>
+            <!-- next btn -->
+            <button type="button" class="btn" data-next-btn="next-btn">
+              next
+            </button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <footer class="admission-form-footer center-text">
+      <div>
+        <a href="../index.html">Back to admission portal</a>
+      </div>
+      <div class="">
+        <small>copyright &copy;2020. All rights reserved. AFSS<sup>&trade;</sup> Ibadan</small>
+      </div> 
+    </footer>
+  </main>
+
+  <!-- javaScript files -->
+  <script type="module" src="../js/utility-functions.js"></script>
+  <script type="module" src="../js/admission-form.js"></script>
+</body>
+</html>

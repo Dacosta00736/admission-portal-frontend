@@ -1,0 +1,24 @@
+.center-text {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 0.7rem;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

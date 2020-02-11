@@ -1,0 +1,30 @@
+/* Input fields */
+.input-field {
+  margin-bottom: 0.8rem;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  outline: none;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 3px;
+  padding: 1rem 0.7rem;
+  width: 100%;
+  background: var(--white-color);
+  color: #23213f;
+  font-size: 15px;
+  transition: border 500ms ease-in;
+}
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+  border: 1px solid var(--pry-color);
+}
+
+.input-field input[type="password"] {
+  letter-spacing: 1.5px;
+}
+
+/* Input fields ends */

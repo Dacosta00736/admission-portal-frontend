@@ -1,0 +1,24 @@
+.flex-container {
+  display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.grid-container {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.two-grid-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-grid-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-grid-columns {
+  grid-template-columns: repeat(4, 1fr);
+}

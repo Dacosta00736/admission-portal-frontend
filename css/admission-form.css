@@ -1,0 +1,33 @@
+.main-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.admission-form-header {
+  padding: 0.8rem 0.3rem;
+}
+
+.admission-form-header .sch-logo {
+  width: 140px;
+  height: auto;
+}
+
+.admission-frm-container {
+  width: 100%;
+  max-width: 350px;
+  margin: 5% auto;
+}
+
+.admission-form-footer {
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.admission-form-footer a {
+  text-decoration: none;
+  color: var(--pry-color);
+  letter-spacing: 1px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
