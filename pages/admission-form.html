@@ -14,11 +14,11 @@
 </head>
 <body>
   <main class="main-wrapper bg-white">
-    <header class="admission-form-header">
+    <header class="admission-form-header" style="padding-bottom: 0;">
       <div class="center-text">
         <!-- sch crest / logo -->
-        <img src="../img/afss_logo.png" alt="sch logo" width="140" height="auto" class="sch-logo">
-        <h2 class="title">
+        <img src="../img/afss_logo.png" alt="sch logo" width="135" height="auto" class="sch-logo">
+        <h2 class="title" style="margin-bottom: 0;">
           Ibadan <br>
           Admission Form
         </h2>
@@ -30,14 +30,16 @@
       <header class="center-text indicator-container">
         <span class="indicators active"></span>
         <span class="indicators"></span>
-        <h4 class="title indicator-title text-secondary">create account</h4>
+        <span class="indicators"></span>
+        <span class="indicators"></span>
+        <h4 class="title indicator-title text-secondary fade-in"></h4>
       </header>
 
       <section class="admission-frm-container">
         <form action="#" method="POST" data-admission-frm="admission-frm">
           <div class="tab-container">
             <!-- 1st step: student's data-info -->
-            <div class="tab" title="student's info">
+            <div class="tab fade-in" title="student's info">
               <div class="input-field">
                 <label for="first name">first name (surname)</label>
                 <input type="text" name="firstname" placeholder="First Name or Surname" required>
@@ -56,15 +58,12 @@
               </div>
               <div class="input-field">
                 <label for="first name">passport photograph</label>
-                <input type="file" name="passport" placeholder="Your passport photograph">
-                <small class="text-pry">
-                  &#8520; Your passport size shouldn't be more than 100kb
-                </small>
+                <input type="file" name="passport" placeholder="Your passport photograph" required>
               </div>
             </div>
 
             <!-- 2nd step: student's origin -->
-            <div class="tab" title="student's origin">
+            <div class="tab fade-in" title="student's origin">
               <div class="input-field">
                 <label for="DOB">DOB</label>
                 <input type="date" name="DOB" placeholder="date of birth" required>
@@ -84,7 +83,7 @@
             </div>
 
             <!-- 3rd step: parent's data-info -->
-            <div class="tab" title="parent's data-info">
+            <div class="tab fade-in" title="parent's data-info">
               <div class="input-field">
                 <label for="father's name">father's full name</label>
                 <input type="text" name="fatherName" placeholder="Father's Full name" required>
@@ -104,7 +103,7 @@
             </div>
 
             <!-- 4th step: Admission data-info -->
-            <div class="tab" title="admission info">
+            <div class="tab fade-in" title="admission info">
               <div class="input-field">
                 <label for="admission class">admission class</label>
                 <select name="admissionClass" required>
@@ -147,16 +146,16 @@
           </div>
         </form>
       </section>
-    </section>
 
-    <footer class="admission-form-footer center-text">
-      <div>
-        <a href="../index.html">Back to admission portal</a>
-      </div>
-      <div class="">
-        <small>copyright &copy;2020. All rights reserved. AFSS<sup>&trade;</sup> Ibadan</small>
-      </div> 
-    </footer>
+      <footer class="admission-form-footer center-text">
+        <div>
+          <a href="../index.html">Back to admission portal</a>
+        </div>
+        <div class="text-secondary">
+          <small>copyright &copy;2020. All rights reserved. AFSS<sup>&trade;</sup> Ibadan</small>
+        </div> 
+      </footer>
+    </section>
   </main>
 
   <!-- javaScript files -->

@@ -103,9 +103,6 @@ const ctrlSignupTabs = (no) => {
 };
 
 const prevNextTab = (no) => {
-  // the next & prev. buttons
-  const prevBtn =  cssQry(document, '[data-prev-btn]');
-  const nextBtn =  cssQry(document, '[data-next-btn]');
   // the tabs
   const tab = cssQryAll('.tab-container .tab');
 

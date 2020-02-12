@@ -5,19 +5,51 @@
   overflow-x: hidden;
 }
 
+/* Indicators */
+.indicator-container {
+  margin-bottom: 0.3rem;
+}
+
+.indicator-container span.indicators {
+  display: inline-block;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--light-grey-color);
+}
+
+.indicator-container span.active {
+  background: var(--secondary-color);
+  transition: background  600ms ease-in-out;
+}
+
+.indicator-title {
+  font-weight: 100;
+}
+
+/* Indicators ends */
+
+.form-container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto 5%;
+}
+
+.tab-container .tab {
+  display: none;
+}
+
+/* .tab-container .tab:nth-child(1) {
+  display: block;
+} */
+
 .admission-form-header {
   padding: 0.8rem 0.3rem;
 }
 
 .admission-form-header .sch-logo {
-  width: 140px;
+  width: 135px;
   height: auto;
-}
-
-.admission-frm-container {
-  width: 100%;
-  max-width: 350px;
-  margin: 5% auto;
 }
 
 .admission-form-footer {
@@ -30,4 +62,9 @@
   color: var(--pry-color);
   letter-spacing: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+[data-prev-btn] {
+  display: none;
+  margin-right: 1.5rem;
 }

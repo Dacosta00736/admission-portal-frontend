@@ -3,6 +3,13 @@
   margin-bottom: 0.8rem;
 }
 
+.input-field label {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: capitalize;
+  padding: 0 0.3rem;
+}
+
 .input-field input,
 .input-field select,
 .input-field textarea {
