@@ -26,9 +26,4 @@ function getFrmData(frmID) {
   return frmData;
 }
 
-const something = 'hello there JS modules';
-const greet = function() {
-  console.log('top of the morning to you, sir!');
-};
-
-export { something, greet, id, cssQry, cssQryAll, getFrmData };
+export { id, cssQry, cssQryAll, getFrmData };

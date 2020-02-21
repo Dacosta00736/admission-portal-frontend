@@ -2,17 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Examination  Print-out Slip</title>
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/utility.css">
+  <link rel="stylesheet" href="../css/colours.css">
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="../css/slip.css">
 </head>
 <body>
-  <main>
-    <h1 class="center-text title">Examination Print-out slip</h1>
+  <main class="slip-main-wrapper">
+    <header class="slip-header center-text">
+      <!-- school image -->
+      <div class="sch-img-container">
+        <img src="../img/afss_logo.png" class="sch-img" alt="sch_img" width="150" height="auto">
+      </div>
+      <!-- sch name -->
+      <h2 class="title center-text">
+        Apostolic Faith Secondary School, Ibadan
+      </h2>
+      <!-- sch address -->
+      <h3 class="title center-text">
+        Apostolic faith SW8/803A Lodge Street, Oke-Ado, Ibadan, Oyo state
+      </h3>
+      <h4 class="center-text">
+        <span>Email: contact-mail@afssib.com</span> <span>Tel: +234 2231 2731</span>
+      </h4>
+    </header>
+
+    <section class="content-section">
+      <!-- student's info section -->
+      <h4 class="title">student's info data:</h4>
+      <div class="section-border grid-container three-grid-columns">
+        <!-- student info -->
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td class="bold-text">Full Name:</td>
+                <td>Jon Martin Doe</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Gender:</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Nationality</td>
+                <td>Norwagian</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- parent info -->
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td class="bold-text">Email:</td>
+                <td>something@example.com</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Phone:</td>
+                <td>+234 8120 548 456</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Form ID:</td>
+                <td>ref/02/123ad</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- student passport photograph -->
+        <div class="std-pp">
+          <img src="#" alt="std-pic" width="80" height="auto">
+        </div>
+      </div>
+
+      <!-- admission detail section -->
+      <h4 class="title">admission details:</h4>
+      <div class="section-border grid-container three-grid-columns">
+        <!-- admission info (i.e: prefered class & date) -->
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td class="bold-text">Prefered class:</td>
+                <td>sss 1</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Prefered date:</td>
+                <td>feb 10, 2020</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Prefered day:</td>
+                <td>exam-day 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- examination date info (i.e: exam start & end time) -->
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td class="bold-text">Exam starts:</td>
+                <td>10:00am</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Exam ends:</td>
+                <td>12:00pm</td>
+              </tr>
+              <tr>
+                <td class="bold-text">Exam duration:</td>
+                <td>2hrs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer class="admission-slip-footer">
+      <!-- Barcode (admission form No_ barcode) -->
+      <div class="center-text form-barcode">
+        Loremipsum.
+      </div>
+
+      <!-- Notice section -->
+      <div class="notice-section">
+        <div class="notice-info">
+          <h5 class="title secondary-color" style="margin-bottom: 0.2rem;">notice:</h5>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quasi nisi fugiat quo dolorem blanditiis.
+          </p>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <!-- javaScript files -->
-  <script src="../js/main.js"></script>
+  <script src="../js/slip.js"></script>
 </body>
 </html>

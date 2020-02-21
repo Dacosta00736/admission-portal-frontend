@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Barcode;
+  src: url(../fonts/LibreBarcode39-Regular.ttf);
+}
+
+body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.slip-header {
+  margin-bottom: 1.5rem;
+}
+
+.sch-img-container {
+  padding-top: 2rem;
+}
+
+.slip-header .sch-img {
+  width: 150px;
+  height: auto;
+}
+
+.slip-header .title {
+  margin-bottom: 0.2rem;
+}
+
+.slip-main-wrapper {
+  margin: 3% 3%;
+  background: var(--white-color);
+}
+
+.content-section {
+  padding: 0 10%;
+}
+
+.content-section .title {
+  margin-bottom: 0;
+  padding-left: 0.3rem;
+}
+
+.section-border {
+  border: 1px solid var(--light-grey-color);
+  border-radius: 3px;
+  padding: 1rem 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--light-grey-color);
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.form-barcode {
+  font-family: Barcode;
+  font-size: 40px;
+  margin-top: 3rem;
+}
+
+.notice-section {
+  padding: 0% 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.notice-info {
+  border: 2px dashed var(--light-grey-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}

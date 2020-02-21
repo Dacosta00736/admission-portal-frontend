@@ -78,9 +78,11 @@ const toggleLoginAndSignupFrm = (obj) => {
 
 const ctrlSignupTabs = (no) => {
   const tab = cssQryAll('.tab-container .tab');
+  const tabTitle = cssQry(document, '.indicator-title');
   let tabLen = tab.length;
 
   tab[tabCount].style.display = 'block';
+  tabTitle.innerText = tab[tabCount].title;
   // toggle btw hide/show prev btn
   if (tabCount == 0) {
     prevBtn.style.display = "none";

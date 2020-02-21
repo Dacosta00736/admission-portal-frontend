@@ -1,0 +1,126 @@
+html, body {
+  overflow-x: hidden;
+}
+
+/* ====== navigation bar ====== */
+.navbar-header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: var(--white-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.nav-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+}
+
+.nav-brand .sch-nav-logo {
+  width: 80px;
+  height: auto;
+}
+
+.nav-brand .toggle-mobile-nav-btn {
+  display: none;
+  padding: 0.2em;
+  font-size: 2em;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav a.nav-link {
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  padding: 1rem 0.8rem;
+  cursor: pointer;
+}
+
+.nav a.nav-link.active {
+  background: rgba(220, 222, 234, 0.38);
+  border-radius: 5px;
+  transition: background 600ms ease-in-out;
+}
+
+.nav a.nav-link.active:active, .nav a.nav-link.active:hover {
+  background: rgba(220, 222, 234, 1);
+}
+
+.navbar-box-shadow {
+  box-shadow: -55px 11px 15px rgba(0, 0, 0, 0.45);
+}
+
+.show-mobile-nav {
+  display: flex !important;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.8rem;
+    display: none;
+  }
+
+  .nav a.nav-link {
+    padding: 1.7rem 1rem;
+    width: 100%;
+  }
+
+  .nav-brand .toggle-mobile-nav-btn {
+    display: flex;
+  }
+}
+/* ====== navigation bar ends ====== */
+
+.main-wrapper {
+  margin-top: 5rem;
+}
+
+/* ====== main body section ====== */
+
+/* subject listing */
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+/* subject listing ends */
+
+/* ====== main body section ends ====== */
+
+/* ====== footer ====== */
+/* ====== footer ends ====== */

@@ -84,3 +84,9 @@ cssQry(document, '[data-prev-btn]').addEventListener('click', () => {
 cssQry(document, '[data-next-btn]').addEventListener('click', () => {
   prevNextTab(1);
 });
+
+// @desc: admission form submission
+cssQry(document, '[data-admission-frm]').addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('admission form submitted!');
+});
