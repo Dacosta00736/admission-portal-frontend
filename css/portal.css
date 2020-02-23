@@ -4,6 +4,7 @@ html, body {
 
 /* ====== navigation bar ====== */
 .navbar-header-container {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +15,8 @@ html, body {
 .navbar {
   width: 100%;
   height: auto;
-  background-color: var(--white-color);
+  background-color: var(--pry-color);
+  color: var(--white-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
@@ -36,7 +38,7 @@ html, body {
   display: none;
   padding: 0.2em;
   font-size: 2em;
-  color: var(--secondary-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -50,7 +52,7 @@ html, body {
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 1px;
-  color: var(--secondary-color);
+  color: var(--white-color);
   padding: 1rem 0.8rem;
   cursor: pointer;
 }
@@ -66,7 +68,7 @@ html, body {
 }
 
 .navbar-box-shadow {
-  box-shadow: -55px 11px 15px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px -46px 2px 43px rgba(0, 0, 0, 0.45);
 }
 
 .show-mobile-nav {
@@ -79,40 +81,135 @@ html, body {
   }
 
   .nav {
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0.8rem;
-    display: none;
+    max-height: 0;
+    transition: max-height 600ms ease-in-out;
   }
 
   .nav a.nav-link {
     padding: 1.7rem 1rem;
     width: 100%;
+    font-size: 16px;
   }
 
   .nav-brand .toggle-mobile-nav-btn {
     display: flex;
   }
+
+  .main-wrapper {
+    background: var(--white-color);
+    padding: 1.8rem 0.8rem;
+  }
+
+  .grid-container {
+    gap: 1.6rem;
+  }
+
+  .three-grid-columns {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 1rem;
+  }
 }
 /* ====== navigation bar ends ====== */
 
+/* ====== main body section ====== */
 .main-wrapper {
   margin-top: 5rem;
+  padding: 4rem 1rem;
 }
 
-/* ====== main body section ====== */
+.display-card {
+  background: var(--white-color);
+  padding: 1rem;
+  display: flex;
+  border: 1px solid var(--light-grey-color);
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px -4px rgba(0,0,0, 0.4);
+}
+
+.display-card-icon {
+  flex-grow: 2;
+  align-self: center;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.display-card-info {
+  flex-grow: 8;
+}
+
+.display-card-title {
+  font-family: monospace;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+}
+
+.display-card-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+}
+
+.grid-container {
+  gap: 2rem;
+}
+
+.date-section {
+  margin-top: 3rem;
+}
+
+.exam-status-section {
+  width: 50%;
+}
+
+.exam-date-container {
+  width: 100%;
+  justify-content: space-evenly;
+}
 
 /* subject listing */
+.subj-pecent-container {
+  margin-top: 2rem;
+}
+
+.subject-listing-container, .scores-percentage-container {
+  background: var(--white-color);
+  border: 1px solid var(--light-grey-color);
+  border-radius: 3px;
+  overflow: auto;
+}
+
 table {
+  border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 }
 
 th, td {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  text-transform: capitalize;
   text-align: left;
   padding: 16px;
+}
+
+thead tr {
+  border-bottom: 2px dashed var(--light-grey-color);
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: var(--light-grey-color);
+  transition: background 600ms ease-in;
 }
 
 tr:nth-child(even) {
@@ -120,7 +217,119 @@ tr:nth-child(even) {
 }
 /* subject listing ends */
 
+.scores-percentage-container {
+  box-shadow: 0px 2px 10px -4px rgba(0,0,0, 0.4);
+}
+
+.header {
+  padding: 1.2rem 1rem;
+}
+
+.header-rounded {
+  border-top-left-radius: 3px;
+}
+
+.header-border {
+  border-bottom: 2px solid var(--light-grey-color);
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  .main-wrapper {
+    padding: 4rem 4rem;
+  }
+
+  .section {
+    padding: 0 9rem;
+  }
+
+  .grid-container {
+    gap: 2rem;
+  }
+
+  .exam-status-section {
+    width: 40%;
+  }
+
+  .subj-pecent-container {
+    margin-top: 3rem;
+  }
+
+  .footer-links-container {
+    padding: 0 35rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .exam-status-section {
+    width: 95%;
+  }
+
+  .exam-date-icon-conatainer, .exam-status-icon {
+    padding: 0rem 0.4rem;
+    align-self: center;
+  }
+
+  .exam-date-time-container, .exam-status-container {
+    text-transform: capitalize;
+  }
+
+  .subj-pecent-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subject-listing-container {
+    margin: 1.3rem 0;
+  }
+
+  .scores-percentage-container {
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
 /* ====== main body section ends ====== */
 
 /* ====== footer ====== */
+.footer {
+  padding: 1rem 0.6rem;
+}
+
+.footer-img {
+  width: 70px;
+  height: auto;
+  opacity: 0.4;
+  filter: hue-rotate(45deg);
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 1px;
+  margin-top: -5px;
+  margin-bottom: 0.6rem;
+}
+
+.footer-links-container a {
+  text-decoration: none;
+  color: #decbcb;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  font-variant: petite-caps;
+  cursor: pointer;
+}
+
+.copyright-text {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .copyright-text {
+    font-size: 12px;
+  }
+}
 /* ====== footer ends ====== */

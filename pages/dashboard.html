@@ -7,6 +7,7 @@
   <title>Admission Dashboard</title>
   <link rel="stylesheet" href="../css/themify-icons.css">
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/colours.css">
   <link rel="stylesheet" href="../css/grid.css">
   <link rel="stylesheet" href="../css/utility.css">
   <link rel="stylesheet" href="../css/portal.css">
@@ -35,12 +36,12 @@
       <div class="grid-container three-grid-columns">
         <!-- student's name -->
         <div class="display-card">
-          <div><!-- user icon -->
-            <i class="ti ti-user display-card-icon"></i>
+          <div class="display-card-icon text-secondary"><!-- user icon -->
+            <i class="ti ti-user"></i>
           </div>
-          <div><!-- student name info -->
+          <div class="display-card-info"><!-- student name info -->
             <h5 class="display-card-title">name:</h5>
-            <div class="display-card-info">
+            <div class="display-card-text">
               john martin doe
             </div>
           </div>
@@ -48,12 +49,12 @@
 
         <!-- class for admission -->
         <div class="display-card">
-          <div><!-- class icon -->
-            <i class="ti ti-stamp display-card-icon"></i>
+          <div class="display-card-icon text-pry"><!-- class icon -->
+            <i class="ti ti-stamp"></i>
           </div>
-          <div><!-- class addmission info -->
+          <div class="display-card-info"><!-- class addmission info -->
             <h5 class="display-card-title">class:</h5>
-            <div class="display-card-info">
+            <div class="display-card-text">
               SSS 1
             </div>
           </div>
@@ -61,12 +62,12 @@
 
         <!-- admission status -->
         <div class="display-card">
-          <div><!-- admission icon -->
-            <i class="ti ti-bookmark display-card-icon"></i>
+          <div class="display-card-icon text-danger"><!-- admission icon -->
+            <i class="ti ti-bookmark"></i>
           </div>
-          <div><!-- admission status info -->
+          <div class="display-card-info"><!-- admission status info -->
             <h5 class="display-card-title">admission:</h5>
-            <div class="display-card-info">
+            <div class="display-card-text">
               not yet admitted
             </div>
           </div>
@@ -75,80 +76,85 @@
     </section>
 
     <!-- Examination date & time, Examination status section -->
-    <section class="section">
-      <div class="center-element">
-        <div class="grid-container two-grid-columns display-card">
-          <div class="two-grid-columns"><!-- Exam Date & time container -->
-            <div><!-- date icon -->
-              <i class="ti ti-calendar display-card-icon"></i>
-            </div> 
-            <div><!-- exam date & time -->
-              <span>date: Feb 20</span> <br>
-              <span>time: 10:00am</span>
-            </div>
+    <section class="section date-section center-element">
+      <div class="grid-container two-grid-columns display-card exam-status-section">
+        <div class="flex-container exam-date-container"><!-- Exam Date & time container -->
+          <div class="exam-date-icon-conatainer text-warning"><!-- date icon -->
+            <i class="ti ti-calendar display-card-icon"></i>
+          </div> 
+          <div class="exam-date-time-container"><!-- exam date & time -->
+            <span>date: <b>Feb 20</b></span> <br>
+            <span>time: <b>10:00am</b></span>
           </div>
+        </div>
 
-          <div class="two-grid-columns"><!-- Exam status(i.e written/unwritten) -->
-            <div><!-- exam status icon -->
-              <i class="ti ti-receipt display-card-icon"></i>
-            </div>
-            <div><!-- exam status -->
-              <span>exam status: </span> <br>
-              <span>unwritten</span>
-            </div>
+        <div class="flex-container exam-date-container"><!-- Exam status(i.e written/unwritten) -->
+          <div class="exam-status-icon text-secondary"><!-- exam status icon -->
+            <i class="ti ti-receipt display-card-icon"></i>
+          </div>
+          <div class="exam-status-container"><!-- exam status -->
+            <span>exam status: </span> <br>
+            <b>unwritten</b>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Subjects, Scores, and Score percentage section -->
-    <section class="section">
-      <div class="grid-container two-grid-columns">
-        <!-- subject, score data table -->
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>subjects</th>
-                <th>scores</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>english language</td>
-                <td>nil</td>
-              </tr>
-              <tr>
-                <td>mathematics</td>
-                <td>nil</td>
-              </tr>
-              <tr>
-                <td>civic education</td>
-                <td>nil</td>
-              </tr>
-              <tr>
-                <td>basic science</td>
-                <td>nil</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <section class="grid-container two-grid-columns section subj-pecent-container">
+      <div class="subject-listing-container"><!-- subject, score data table -->
+        <header class="header header-rounded header-border title">examination subjects</header>
+        <table>
+          <thead>
+            <tr>
+              <th>subjects</th>
+              <th>scores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>english language</td>
+              <td>nil</td>
+            </tr>
+            <tr>
+              <td>mathematics</td>
+              <td>nil</td>
+            </tr>
+            <tr>
+              <td>civic education</td>
+              <td>nil</td>
+            </tr>
+            <tr>
+              <td>basic science</td>
+              <td>nil</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
         <!-- percentage on mark scored -->
         <div class="scores-percentage-container">
+          <header class="header header-rounded header-border title">percentage on scores</header>
           <canvas id="scorePercentage"></canvas>
         </div>
-      </div>
     </section>
-
-    <footer class="footer center-text">
-      <small>Copyright &copy;2020. AFSS<sup>&trade;</sup> Ibadan or AFSSIB<sup>&trade;</sup>. All Rights Reserved</small>
-    </footer>
   </main>
 
+  <footer class="footer bg-secondary center-text">
+    <img src="../img/afss_logo.png" alt="footer-img" width="70" height="auto" class="footer-img">
+    <div class="footer-links-container">
+      <a href="#/dashboard.html">dashboard</a>
+      <a href="#/profile.html">profile</a>
+      <a href="#../index.html">logout</a>
+    </div>
+    <small class="copyright-text text-grey">
+      Copyright &copy;2020. AFSS<sup>&trade;</sup> Ibadan or AFSSIB<sup>&trade;</sup>. All Rights Reserved
+    </small>
+  </footer>
+
   <!-- javaScript files -->
-  <!-- <script defer src="../js/Chart.min.js"></script> -->
-  <!-- <script defer src="../js/percentage.js"></script> -->
+  <script defer src="../js/Chart.min.js"></script>
+  <script defer src="../js/percentage.js"></script>
   <script type="module" src="../js/portal.js"></script>
 </body>
 </html>
