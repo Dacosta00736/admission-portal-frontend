@@ -5,7 +5,7 @@ var config = {
     datasets: [{
       data: [ 40, 60 ],
       backgroundColor: [
-        'rgba(255, 99, 123, 1)',
+        'rgba(255, 51, 0, 1)',
         'rgba(54, 162, 235, 0.8)'
       ],
       label: 'Percentage on scores'
