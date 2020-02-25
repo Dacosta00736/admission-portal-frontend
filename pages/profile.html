@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Settings</title>
+  <link rel="stylesheet" href="../css/themify-icons.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/colours.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+  <link rel="stylesheet" href="../css/inputs-fields.css">
+  <link rel="stylesheet" href="../css/grid.css">
+  <link rel="stylesheet" href="../css/utility.css">
+  <link rel="stylesheet" href="../css/portal.css">
+  <link rel="stylesheet" href="../css/admission-form.css">
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <header class="navbar-header-container">
+    <nav class="navbar">
+      <div class="nav-brand">
+         <!-- sch logo/brand -->
+        <img src="../img/afss_logo.png" class="sch-nav-logo" alt="sch logo" width="80" height="auto">
+        <!-- toggle hide/show nav links on mobile screens -->
+        <i class="ti ti-menu toggle-mobile-nav-btn"></i>
+      </div>
+      <!-- navigation menu links -->
+      <div class="nav">
+        <a class="nav-link" href="#dashboard.html">dashboard</a>
+        <a class="nav-link active" href="#profile.html">profile</a>
+        <a class="nav-link" href="#logout.html">logout</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-wrapper bg-white">
+    <header class="admission-form-header" style="padding-bottom: 0;">
+      <div class="center-text">
+        <!-- sch crest / logo -->
+        <img src="../img/afss_logo.png" alt="sch logo" width="135" height="auto" class="sch-logo">
+        <h2 class="title" style="margin-bottom: 0;">
+          Student <br>
+          Profile Settings
+        </h2>
+      </div>
+    </header>
+
+    <section class="form-container">
+      <!-- steps indicators -->
+      <header class="center-text indicator-container">
+        <span class="indicators active"></span>
+        <span class="indicators"></span>
+        <span class="indicators"></span>
+        <span class="indicators"></span>
+        <h4 class="title indicator-title text-secondary fade-in"></h4>
+      </header>
+
+      <section class="admission-frm-container">
+        <form action="#" method="POST" data-admission-frm="admission-frm" enctype="multipart/form-data">
+          <div class="tab-container">
+            <!-- 1st step: student's data-info -->
+            <div class="tab fade-in" title="student's info">
+              <div class="input-field">
+                <label for="first name">first name (surname)</label>
+                <input type="text" name="firstname" placeholder="First Name or Surname" required value="Doe">
+              </div>
+              <div class="input-field">
+                <label for="other name">other name</label>
+                <input type="text" name="otherName" placeholder="Other Name" required value="John Martin">
+              </div>
+              <div class="input-field">
+                <label for="gender">gender</label>
+                <select name="gender" required>
+                  <option value="">-- Select Your Gender --</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="first name">passport photograph</label>
+                <input type="file" name="passport" placeholder="Your passport photograph" required>
+              </div>
+            </div>
+
+            <!-- 2nd step: student's origin -->
+            <div class="tab fade-in" title="student's origin">
+              <div class="input-field">
+                <label for="DOB">DOB</label>
+                <input type="date" name="DOB" placeholder="date of birth" required>
+              </div>
+              <div class="input-field">
+                <label for="nationality">nationality</label>
+                <input type="text" name="nationality" placeholder="Your Nationality" required>
+              </div>
+              <div class="input-field">
+                <label for="city">Your city</label>
+                <input type="text" name="provinceState" placeholder="State / province / city or town" required>
+              </div>
+              <div class="input-field">
+                <label for="home address">home address</label>
+                <input type="text" name="homeAddress" placeholder="Residential Address">
+              </div>
+            </div>
+
+            <!-- 3rd step: parent's data-info -->
+            <div class="tab fade-in" title="parent's data-info">
+              <div class="input-field">
+                <label for="father's name">father's full name</label>
+                <input type="text" name="fatherName" placeholder="Father's Full name" required>
+              </div>
+              <div class="input-field">
+                <label for="mother's name">mother's full name</label>
+                <input type="text" name="motherName" placeholder="Mother's Full name" required>
+              </div>
+              <div class="input-field">
+                <label for="parent's email">Parent's Email</label>
+                <input type="email" name="parentEmail" placeholder="Parent's Email Address" required>
+              </div>
+              <div class="input-field">
+                <label for="parent's phone">Parent's phone No_</label>
+                <input type="tel" name="parentPhone" placeholder="Parent's Phone No_" required>
+              </div>
+            </div>
+
+            <!-- 4th step: Admission data-info -->
+            <div class="tab fade-in" title="admission info">
+              <div class="input-field">
+                <label for="admission class">admission class</label>
+                <select name="admissionClass" required>
+                  <option value="">-- Select class for Admission --</option>
+                  <option value="jss1">JSS 1</option>
+                  <option value="jss2">JSS 2</option>
+                  <option value="sss1">SSS 1</option>
+                  <option value="sss2">SSS 2</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="former sch">former sch name</label>
+                <input type="text" name="formerSch" placeholder="Name of previous school">
+              </div>
+              <div class="input-field">
+                <label for="former class">former class</label>
+                <input type="text" name="formerClass" placeholder="Last Class Attended">
+              </div>
+              <div class="input-field">
+                <label for="exam date">Examination Date</label>
+                <select name="examDate" required>
+                  <option value="">-- Select Prefered Exam Date --</option>
+                  <option value="2020-02-10T09:00Z">Feb 10 (10:00am)</option>
+                  <option value="2020-02-11T09:00Z">Feb 11 (10:00am)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- next/prev buttons -->
+          <div class="input-field flex-container flex-end">
+            <!-- prev btn -->
+            <button type="button" class="btn btn-outline fade-in" data-prev-btn="prev-btn">
+              prev
+            </button>
+            <!-- next btn -->
+            <button type="button" class="btn" data-next-btn="next-btn">
+              next
+            </button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer bg-secondary center-text">
+    <img src="../img/afss_logo.png" alt="footer-img" width="70" height="auto" class="footer-img">
+    <div class="footer-links-container">
+      <a href="#/dashboard.html">dashboard</a>
+      <a href="#/profile.html">profile</a>
+      <a href="#../index.html">logout</a>
+    </div>
+    <small class="copyright-text text-grey">
+      Copyright &copy;2020. AFSS<sup>&trade;</sup> Ibadan or AFSSIB<sup>&trade;</sup>. All Rights Reserved
+    </small>
+  </footer>
+
+  <!-- javaScript files -->
+  <script type="module" src="../js/admission-form.js"></script>
+  <script type="module" defer src="../js/portal.js"></script>
+</body>
+</html>

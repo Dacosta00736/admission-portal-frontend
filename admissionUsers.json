@@ -1,0 +1,45 @@
+{
+  "userId": "",
+  "email": "",
+  "password": "",
+  "form": {
+    "frmId": "",
+    "firstName": "",
+    "otherName": "",
+    "gender": "",
+    "passport": "",
+    "DOB": "",
+    "nationality": "",
+    "provinceState": "",
+    "homeAddress": "",
+    "fatherName": "",
+    "motherName": "",
+    "parentEmail": "",
+    "parentPhone": "",
+    "examDate": "",
+    "examDay": "",
+    "examStatus": "",
+    "preferredClass": "",
+    "formerClass": "",
+    "formerSch": "",
+    "admissionStatus": "not yet admitted",
+    "regDate": "Date.now()"
+  },
+  "scores": [
+    {
+      "subj": "",
+      "obtainableMark": null,
+      "obtainedScore": null
+    },
+    {
+      "subj": "",
+      "obtainableMark": null,
+      "obtainedScore": null
+    },
+    {
+      "subj": "",
+      "obtainableMark": null,
+      "obtainedScore": null
+    }
+  ]
+}

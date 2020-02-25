@@ -1,0 +1,38 @@
+{
+  "sss": {
+    "subjects": ["English language", "Mathematics", "Current Affairs"],
+    "passMark": 50,
+    "exam": {
+      "day-one": {
+        "date": "Feb 21, 2020",
+        "start-time": "10:00am",
+        "end-time": "12:00pm",
+        "duration": "2hrs"
+      },
+      "day-two": {
+        "date": "Feb 22, 2020",
+        "start-time": "10:00am",
+        "end-time": "12:00pm",
+        "duration": "2hrs"
+      }
+    }
+  },
+  "jss": {
+    "subjects": ["English language", "Mathematics", "Current Affairs"],
+    "passMark": 40,
+    "exam": {
+      "day-one": {
+        "date": "Feb 23, 2020",
+        "start-time": "10:00am",
+        "end-time": "12:00pm",
+        "duration": "2hrs"
+      },
+      "day-two": {
+        "date": "Feb 24, 2020",
+        "start-time": "10:00am",
+        "end-time": "12:00pm",
+        "duration": "2hrs"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "userId": "",
+  "transactionId": "",
+  "transactionStatus": "",
+  "transactionDate": "Date.now()",
+  "cardType": "",
+  "cardHolderName": "",
+  "cardNumber": "",
+  "cvvNo": "",
+  "cardExpiryDate": "",
+  "accountNumber": "",
+  "bankName": "",
+  "amount": ""
+}
